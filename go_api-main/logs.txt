@@ -1,0 +1,16 @@
+[INFO]: 2022/11/15 09:25:43 auth-controller.go:85: RegisterPartner registerDTO:  {0 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc12@gmail.com 123132  0}
+[INFO]: 2022/11/15 09:25:43 auth-service.go:47: CreateUser userToCreate:  {0         0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 09:25:43 auth-service.go:53: CreateUser res:  {132 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc12@gmail.com $2a$04$tKtIS6jqUxflAshm49/TEuloNdfQnaFKcw2HndXW/661VuHTpI5LS  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 09:31:14 server.go:39: Start
+[INFO]: 2022/11/15 09:31:22 auth-controller.go:86: RegisterPartner registerDTO:  {0 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc13@gmail.com 123132  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 09:31:22 auth-service.go:47: CreateUser userToCreate:  {0         0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 09:31:22 auth-service.go:53: CreateUser res:  {133 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc13@gmail.com $2a$04$pJwxdnS4ULbBFx6xZOcez.CJhr6bFk7Z/olkt14B/whioj3QWBKga  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 09:33:09 server.go:39: Start
+[INFO]: 2022/11/15 09:33:17 auth-controller.go:86: RegisterPartner registerDTO:  {0 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc14@gmail.com 123132  0}
+[INFO]: 2022/11/15 09:33:17 auth-service.go:47: CreateUser userToCreate:  {0         0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 09:33:17 auth-service.go:53: CreateUser res:  {134 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc14@gmail.com $2a$04$zHn3.oYa4EjnK5sYpdX0kOHLEoRjPHRSuCDg1GikVuGXHymu86kgq  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 10:19:28 server.go:39: Start
+[INFO]: 2022/11/15 10:19:37 auth-controller.go:86: RegisterPartner registerDTO:  {0 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc14@gmail.com 123132  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 10:19:37 auth-service.go:47: CreateUser userToCreate:  {0         0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 10:19:37 auth-service.go:53: CreateUser res:  {1 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc14@gmail.com $2a$04$lpN7LXqmNySsp.A4ySheLuzGYLQx3fI11XOh2YiNjaJ6r3jfXJtKm  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
+[INFO]: 2022/11/15 10:24:05 server.go:39: Start
