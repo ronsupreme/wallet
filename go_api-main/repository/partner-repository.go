@@ -2,6 +2,7 @@ package repository
 
 import (
 	"go_api/entity"
+	"go_api/logger"
 
 	"gorm.io/gorm"
 )
@@ -14,7 +15,9 @@ type PartnerRepository interface {
 	FindByEmailPartner(email string) entity.Partner
 	ProfileUserPartner(userID string) entity.Partner
 }
-
+type result struct {
+	service_name string
+}
 type partnerConnection struct {
 	connection *gorm.DB
 }
@@ -45,8 +48,11 @@ func (db *partnerConnection) UpdatePartner(partner entity.Partner) entity.Partne
 }
 func (db *partnerConnection) VerifyCredentialPartner(email string, password string) interface{} {
 	var partner entity.Partner
+	logger.InfoLogger.Println("email: ", email)
 	res := db.connection.Where("email = ?", email).Take(&partner)
+	logger.InfoLogger.Println("res: ")
 	if res.Error == nil {
+		logger.InfoLogger.Println("partner: ", partner)
 		return partner
 	}
 	return nil
@@ -68,3 +74,4 @@ func (db *partnerConnection) ProfileUserPartner(userID string) entity.Partner {
 	db.connection.Find(&partner, userID)
 	return partner
 }
+

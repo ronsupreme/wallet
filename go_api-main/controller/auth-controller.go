@@ -35,13 +35,14 @@ func NewAuthController(authService service.AuthService, jwtService service.JWTSe
 func (c *authController) Login(ctx *gin.Context) {
 	var loginDTO dto.LoginDTO
 	errDTO := ctx.ShouldBind(&loginDTO)
+	logger.InfoLogger.Println("errDTO: ", errDTO)
 	if errDTO != nil {
 		response := helper.BuildErrorResponse("Failed to process request", errDTO.Error(), helper.EmptyObj{})
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, response)
 		return
 	}
 	authResult := c.authService.VerifyCredential(loginDTO.Email, loginDTO.Password)
-	if v, ok := authResult.(entity.User); ok {
+	if v, ok := authResult.(entity.Partner); ok {
 		generatedToken := c.jwtService.GenerateToken(strconv.FormatUint(v.ID, 10))
 		v.Token = generatedToken
 		response := helper.BuildResponse(true, "OK!", v)
@@ -74,6 +75,7 @@ func (c *authController) Register(ctx *gin.Context) {
 func (c *authController) RegisterPartner(ctx *gin.Context) {
 	var registerDTO dto.RegisterDTO
 	errDTO := ctx.ShouldBind(&registerDTO)
+	logger.InfoLogger.Println("registerDTO: ", registerDTO)
 	if errDTO != nil {
 		response := helper.BuildErrorResponse("Failed to process request", errDTO.Error(), helper.EmptyObj{})
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, response)

@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"go_api/config"
 	"go_api/controller"
+	"go_api/dto"
+	"go_api/helper"
 	"go_api/logger"
 	"go_api/middleware"
 	"go_api/repository"
@@ -12,8 +14,10 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/golang-jwt/jwt"
 	"gorm.io/gorm"
 )
 
@@ -55,13 +59,8 @@ func main() {
 
 	r.GET("/ping", pingController.Ping)
 	r.GET("/call", callapi)
-
+	r.POST("/link", Link)
 	r.Run(":8080")
-}
-
-type foo struct {
-	name string
-	age  int
 }
 
 func callapi(ctx *gin.Context) {
@@ -79,4 +78,38 @@ func callapi(ctx *gin.Context) {
 	}
 	ctx.String(http.StatusOK, string(responseData))
 	fmt.Println(string(responseData))
+}
+
+func Link(ctx *gin.Context) {
+	var request dto.Request
+	var response helper.WalletResponse
+	errDTO := ctx.ShouldBind(&request)
+	logger.InfoLogger.Println("rq: ", request)
+
+	authHeader := ctx.GetHeader("Authorization")
+	logger.InfoLogger.Println("authorization: ", authHeader)
+
+	if errDTO != nil {
+		response := helper.BuildErrorResponse("Failed to process request", errDTO.Error(), helper.EmptyObj{})
+		ctx.AbortWithStatusJSON(http.StatusBadRequest, response)
+		return
+	}
+
+	token, errToken := jwtService.ValidateToken(authHeader)
+	if errToken != nil {
+		panic(errDTO.Error())
+	}
+	claims := token.Claims.(jwt.MapClaims)
+	if claims.VerifyExpiresAt(time.Now().Unix(), true) {
+
+	}
+	logger.InfoLogger.Println("claims: ", claims.VerifyExpiresAt(time.Now().UnixMicro(), true))
+	logger.InfoLogger.Println("cmp: ", claims)
+
+	var ress string
+	db.Raw("SELECT  service_name FROM  wallet.api_provider_mapping WHERE Status= 'Y' and provider =? and operation = ? ", request.Header.Providerno, "wallet2Bank").Scan(&ress)
+	logger.InfoLogger.Println("ress: ", ress)
+	response.Body.BankRef = "001"
+	// response := helper.BuildLinkRequest(headerLinkDTO, bodyLinkDTO)
+	ctx.JSON(http.StatusOK, response)
 }

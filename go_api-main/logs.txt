@@ -1,16 +1,14 @@
-[INFO]: 2022/11/15 09:25:43 auth-controller.go:85: RegisterPartner registerDTO:  {0 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc12@gmail.com 123132  0}
-[INFO]: 2022/11/15 09:25:43 auth-service.go:47: CreateUser userToCreate:  {0         0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 09:25:43 auth-service.go:53: CreateUser res:  {132 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc12@gmail.com $2a$04$tKtIS6jqUxflAshm49/TEuloNdfQnaFKcw2HndXW/661VuHTpI5LS  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 09:31:14 server.go:39: Start
-[INFO]: 2022/11/15 09:31:22 auth-controller.go:86: RegisterPartner registerDTO:  {0 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc13@gmail.com 123132  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 09:31:22 auth-service.go:47: CreateUser userToCreate:  {0         0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 09:31:22 auth-service.go:53: CreateUser res:  {133 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc13@gmail.com $2a$04$pJwxdnS4ULbBFx6xZOcez.CJhr6bFk7Z/olkt14B/whioj3QWBKga  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 09:33:09 server.go:39: Start
-[INFO]: 2022/11/15 09:33:17 auth-controller.go:86: RegisterPartner registerDTO:  {0 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc14@gmail.com 123132  0}
-[INFO]: 2022/11/15 09:33:17 auth-service.go:47: CreateUser userToCreate:  {0         0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 09:33:17 auth-service.go:53: CreateUser res:  {134 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc14@gmail.com $2a$04$zHn3.oYa4EjnK5sYpdX0kOHLEoRjPHRSuCDg1GikVuGXHymu86kgq  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 10:19:28 server.go:39: Start
-[INFO]: 2022/11/15 10:19:37 auth-controller.go:86: RegisterPartner registerDTO:  {0 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc14@gmail.com 123132  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 10:19:37 auth-service.go:47: CreateUser userToCreate:  {0         0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 10:19:37 auth-service.go:53: CreateUser res:  {1 Le Cong Nghi nghilc Nam A Bank VN 00 nghilc14@gmail.com $2a$04$lpN7LXqmNySsp.A4ySheLuzGYLQx3fI11XOh2YiNjaJ6r3jfXJtKm  0 0001-01-01 00:00:00 +0000 UTC  0001-01-01 00:00:00 +0000 UTC }
-[INFO]: 2022/11/15 10:24:05 server.go:39: Start
+[INFO]: 2022/11/18 14:54:48 server.go:87: rq:  {{20960769124025538R09cb52 VIMO } {000000422600001 Wallet 051082018287 0906330397 CUSTOMER_0004226}}
+[INFO]: 2022/11/18 14:54:48 server.go:90: authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNiIsImV4cCI6MTcwMDIxNDY0MywiaWF0IjoxNjY4Njc4NjQzLCJpc3MiOiJsZXh1YW5xdXluaCJ9.7jEOH-rKU31q-LBQ5y4-J3872k83FUifEEE8AcpIJb0
+[INFO]: 2022/11/18 14:54:48 server.go:106: claims:  false
+[INFO]: 2022/11/18 14:54:48 server.go:107: cmp:  map[exp:1.700214643e+09 iat:1.668678643e+09 iss:lexuanquynh user_id:6]
+[INFO]: 2022/11/18 14:56:32 server.go:43: Start
+[INFO]: 2022/11/18 14:56:36 server.go:87: rq:  {{20960769124025538R09cb52 VIMO } {000000422600001 Wallet 051082018287 0906330397 CUSTOMER_0004226}}
+[INFO]: 2022/11/18 14:56:36 server.go:90: authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNiIsImV4cCI6MTcwMDIxNDY0MywiaWF0IjoxNjY4Njc4NjQzLCJpc3MiOiJsZXh1YW5xdXluaCJ9.7jEOH-rKU31q-LBQ5y4-J3872k83FUifEEE8AcpIJb0
+[INFO]: 2022/11/18 14:56:36 server.go:106: claims:  false
+[INFO]: 2022/11/18 14:56:36 server.go:107: cmp:  map[exp:1.700214643e+09 iat:1.668678643e+09 iss:lexuanquynh user_id:6]
+[INFO]: 2022/11/18 14:59:00 server.go:43: Start
+[INFO]: 2022/11/18 14:59:04 server.go:87: rq:  {{20960769124025538R09cb52 VIMO } {000000422600001 Wallet 051082018287 0906330397 CUSTOMER_0004226}}
+[INFO]: 2022/11/18 14:59:04 server.go:90: authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNiIsImV4cCI6MTcwMDIxNDY0MywiaWF0IjoxNjY4Njc4NjQzLCJpc3MiOiJsZXh1YW5xdXluaCJ9.7jEOH-rKU31q-LBQ5y4-J3872k83FUifEEE8AcpIJb0
+[INFO]: 2022/11/18 14:59:04 server.go:106: claims:  false
+[INFO]: 2022/11/18 14:59:04 server.go:107: cmp:  map[exp:1.700214643e+09 iat:1.668678643e+09 iss:lexuanquynh user_id:6]

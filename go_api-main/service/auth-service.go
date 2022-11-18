@@ -32,13 +32,16 @@ func NewAuthService(partner repository.PartnerRepository) AuthService {
 
 func (service *authService) VerifyCredential(email string, password string) interface{} {
 	res := service.partnerRepository.VerifyCredentialPartner(email, password)
-	if v, ok := res.(entity.User); ok {
+	logger.InfoLogger.Println("VerifyCredential", "res1:", res)
+	if v, ok := res.(entity.Partner); ok {
 		comparedPassword := comparePassword(v.Password, []byte(password))
 		if v.Email == email && comparedPassword {
+			logger.InfoLogger.Println("VerifyCredential", "res2:", res)
 			return res
 		}
 		return false
 	}
+
 	return false
 }
 

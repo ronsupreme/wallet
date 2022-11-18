@@ -1,13 +1,19 @@
 package helper
 
 type WalletResponse struct {
-	Header interface{} `json:"header"`
-	Body   interface{} `json:"data"`
+	Header HeaderResp `json:"header"`
+	Body   BodyResp `json:"body"`
 }
-type EmptyObj2 struct {
+type HeaderResp struct {
+	RespCode string `json:"respCode"`
+	RespMsg string `json:"respMsg"`
+	BankSignature string `json:"bankSignature"`
+}
+type BodyResp struct{
+	BankRef string `json:"bank_ref"`
 }
 
-func BuildLinkRequest(header interface{}, body interface{}) WalletResponse {
+func BuildLinkReponse(header HeaderResp, body BodyResp) WalletResponse {
 	res := WalletResponse{
 		Header: header,
 		Body:   body,
